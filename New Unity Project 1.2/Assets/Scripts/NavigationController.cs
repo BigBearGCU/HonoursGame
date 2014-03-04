@@ -3,6 +3,7 @@ using System.Collections;
 
 public class NavigationController : MonoBehaviour {
 
+	//Waypoints
 	public GameObject[] Waypoints;
 	public NavMeshAgent navMesh;
 	int currentWaypoint=0;
