@@ -27,6 +27,7 @@ public class GUI_Miner : MonoBehaviour {
 	void Start () {
 
 		min1 = GameObject.Find ("Miner1");
+		min1.SetActive(false);
 		min2 = GameObject.Find ("Miner2");
 		min3 = GameObject.Find ("Miner3");
 		min4 = GameObject.Find ("Miner4");
@@ -50,7 +51,7 @@ public class GUI_Miner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		/*
 				if (move) {
 						min1.GetComponent<NavMeshAgent> ().destination = wp1_3.transform.position;
 						min2.GetComponent<NavMeshAgent> ().destination = wp2_4.transform.position;
@@ -66,7 +67,7 @@ public class GUI_Miner : MonoBehaviour {
 
 						}
 	
-				}
+				}*/
 		}
 
 	void OnGUI(){
@@ -74,6 +75,8 @@ public class GUI_Miner : MonoBehaviour {
 		GUI.enabled = enab;
 		if (GUI.Button (new Rect (15, Screen.height - 75, butImg.width, butImg.height), butImg)){
 			move = true;
+			min1.SetActive(true);
+			
 			enab = false;
 		}
 	}
